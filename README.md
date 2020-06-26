@@ -1,5 +1,7 @@
 Fron-End for the Real Estate Agency
 
+Live: https://m90khan.github.io/RealtorX---Housing-Agency/
+
 Html5, Css3, Sass(SCSS Syntax)
 
 Scripts: run npm install for node-modules installation
@@ -13,4 +15,3 @@ Layout: CSS Grid Layout (BEM Model)
 - To run for devserver, uncomment the line in html <!-- <link rel="stylesheet" href="icons/styles.css" /> -->
 
 <img src="./img/desktop-view.jpg" alt="" />
-<img src="./img/mobileview.png" alt="" />
