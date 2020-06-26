@@ -15,4 +15,3 @@ Layout: CSS Grid Layout (BEM Model)
 - To run for devserver, uncomment the line in html <!-- <link rel="stylesheet" href="icons/styles.css" /> -->
 
 <img src="./img/desktop-view.jpg" alt="" />
-<img src="./img/mobileview.png" alt="" />
