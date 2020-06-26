@@ -1,0 +1,42 @@
+//Grid
+
+.container {
+  display: grid;
+  /*
+     Layout thought Process:
+    - 8 grid items > 6 rows > 8 columns
+    - first row: has responsive towards height so 80vh
+  
+    */
+  //row tracks
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  //column tracks Normally in design 8,12, 16 column grids are designed
+  //8rem for the sidebar
+  // 8 columns of 14rem for the content
+  // and to justify content in the center two 1fr with a minimum margin of 6rem inbetween the 8 columsn
+  // There are sections that flows from one to the other end #full-bleed sections so justify content would not be good idea
+  grid-template-columns:
+    [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr)
+    [center-start] repeat(8,[col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr)
+    [full-end];
+
+  @media only screen and (max-width: $bp-large) {
+    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr) [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      )
+      [center-end] minmax(6rem, 1fr) [full-end];
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-rows: 6rem calc(100vh - 6rem);
+  }
+
+  //
+  // & > *{
+  //   padding: 40px;
+  //   font-size: 3rem;
+  // }
+}
